@@ -29,7 +29,7 @@ end
 
 snippet 'elif ...' do |s|
   s.trigger = 'elif'
-  s.expansion = 'elif ${2:[[ ${1:condition} ]]}; then
+  s.expansion = 'elif [[ ${1:condition} ]]; then
 	${0:#statements}'
 end
 
@@ -42,27 +42,28 @@ end
 
 snippet 'for ... in ... done' do |s|
   s.trigger = 'forin'
-  s.expansion = 'for ${1:i}${2/.+/ in /}${2:words}; do
+  s.expansion = 'for ${1:i} in ${2:words}; do
 	${0:#statements}
 done'
 end
 
 snippet 'Here Document' do |s|
   s.trigger = 'here'
-  s.expansion = '<<-${2:\'${1:TOKEN}\'}
+  s.expansion = '<<-\'${1:TOKEN}\'
 	$0
-${1/[\'"`](.+)[\'"`]/$1/}'
+${1}'
 end
 
 snippet 'if ... fi' do |s|
   s.trigger = 'if'
-  s.expansion = 'if ${2:[[ ${1:condition} ]]}; then
+  s.expansion = 'if [[ ${1:condition} ]]; then
 	${0:#statements}
 fi'
 end
 
 snippet 'Tempfile' do |s|
   s.trigger = 'temp'
+  # FIXME Fix this snippet!
   s.expansion = '${1:TMPFILE}="$(mktemp -t ${2:`echo "${TM_FILENAME%.*}" | sed -e \'s/[^a-zA-Z]/_/g\' -e \'s/^$/untitled/\'`})"
 ${3:${4/(.+)/trap "/}${4:rm -f \'\$${1/.*\s//}\'}${4/(.+)/" 0               # EXIT
 /}${5/(.+)/trap "/}${5:rm -f \'\$${1/.*\s//}\'; exit 1}${5/(.+)/" 2       # INT
@@ -73,14 +74,14 @@ end
 
 snippet 'until ... done' do |s|
   s.trigger = 'until'
-  s.expansion = 'until ${2:[[ ${1:condition} ]]}; do
+  s.expansion = 'until [[ ${1:condition} ]]; do
 	${0:#statements}
 done'
 end
 
 snippet 'while ... done' do |s|
   s.trigger = 'while'
-  s.expansion = 'while ${2:[[ ${1:condition} ]]}; do
+  s.expansion = 'while [[ ${1:condition} ]]; do
 	${0:#statements}
 done'
 end
