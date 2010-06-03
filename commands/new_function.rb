@@ -6,17 +6,19 @@ command 'New Function' do |cmd|
   cmd.trigger = 'fun'
   cmd.output = :insert_as_snippet
   cmd.input = :selection, :word
-  cmd.invoke =<<-EOF
-#!/bin/bash
-NAME="$(cat)"
-if [[ -z "$NAME" ]]; then
-	NAME='${1:function_name}'
-fi
+  cmd.invoke do
+    
+    function_name = $stdin.read
 
-cat <<SNIPPET
-function $NAME () {
-	\${0:#statements}
-}
-SNIPPET
-EOF
+    if function_name.empty? || function_name.nil?
+      function_name = "function_name"  
+    end
+    
+    <<-SNIPPET
+function #{function_name} () {
+  #statements
+}   
+    SNIPPET
+
+  end
 end
