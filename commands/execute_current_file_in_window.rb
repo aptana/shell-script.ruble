@@ -9,7 +9,7 @@ command 'Run Script' do |cmd|
   cmd.invoke do
     # TODO Save current file
     # TODO Get working dir as parent of file
-    Ruble::Terminal.open(ENV["TM_FILEPATH"])
+    Ruble::Terminal.open("\""+ENV["TM_FILEPATH"]+"\"")
   end
 end
 

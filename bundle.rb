@@ -41,9 +41,9 @@ END
       submenu.command 'while ... done'
       submenu.command 'until ... done'
     end
-    main_menu.menu 'Idioms' do |submenu|
-      submenu.command 'Tempfile'
-    end
+    # main_menu.menu 'Idioms' do |submenu|
+    #   submenu.command 'Tempfile'
+    # end
   end
 end
 
