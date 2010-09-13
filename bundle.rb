@@ -48,21 +48,10 @@ END
 end
 
 # Extend Ruble::Editor to set special Comment ENV Vars
-module Ruble
-  class Editor
-    unless method_defined?(:modify_env_pre_shell_script_bundle)
-      alias :modify_env_pre_shell_script_bundle :modify_env
-      def modify_env(scope, env)
-        env_hash = modify_env_pre_shell_script_bundle(scope, env)
-        if scope.start_with? "source.shell"
-          env_hash['TM_COMMENT_START'] = "# "
-          env_hash.delete('TM_COMMENT_END')
-          env_hash.delete('TM_COMMENT_START_2')
-          env_hash.delete('TM_COMMENT_END_2')
-          env_hash.delete('TM_COMMENT_DISABLE_INDENT')
-        end
-        env_hash
-      end
-    end
-  end
+env "source.shell" do |e|
+  e['TM_COMMENT_START'] = "# "
+  e.delete('TM_COMMENT_END')
+  e.delete('TM_COMMENT_START_2')
+  e.delete('TM_COMMENT_END_2')
+  e.delete('TM_COMMENT_DISABLE_INDENT')
 end
