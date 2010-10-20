@@ -13,11 +13,11 @@ You can install it into Studio 3 using the **Commands > Bundle Development > Ins
 
 ## License
 
-This bundle is licensed under the Textmate license, available here:
+This bundle is licensed under the TextMate license, available here:
 
-* [Textmate license](http://svn.textmate.org/trunk/LICENSE)
+* [TextMate license](http://svn.textmate.org/trunk/LICENSE)
 
-## Other Stuff
+## Bugs/Requests
 
 * You can [report a bug or request a feature here](http://github.com/aptana/shell-script.ruble/issues)
 
