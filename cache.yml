@@ -1,0 +1,377 @@
+!!com.aptana.scripting.model.BundleElement
+author: Martin Kuehl
+children:
+- !!com.aptana.scripting.model.MenuElement
+  children:
+  - children: &id001 []
+    commandName: Run Script
+    customProperties: null
+    displayName: Run Script
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: Make Script Executable
+    customProperties: null
+    displayName: Make Script Executable
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: Open Terminal
+    customProperties: null
+    displayName: Open Terminal
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: Documentation for Word / Selection
+    customProperties: null
+    displayName: Documentation for Word / Selection
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: New Function
+    customProperties: null
+    displayName: New Function
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: Here Document
+    customProperties: null
+    displayName: Here Document
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '#!/usr/bin/env'
+    customProperties: null
+    displayName: '#!/usr/bin/env'
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: if ... fi
+      customProperties: null
+      displayName: if ... fi
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: elif ...
+      customProperties: null
+      displayName: elif ...
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: case ... esac
+      customProperties: null
+      displayName: case ... esac
+      path: bundle.rb
+      scope: null
+    commandName: Tests
+    customProperties: null
+    displayName: Tests
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: for ... done
+      customProperties: null
+      displayName: for ... done
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: for ... in ... done
+      customProperties: null
+      displayName: for ... in ... done
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: while ... done
+      customProperties: null
+      displayName: while ... done
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: until ... done
+      customProperties: null
+      displayName: until ... done
+      path: bundle.rb
+      scope: null
+    commandName: Loops
+    customProperties: null
+    displayName: Loops
+    path: bundle.rb
+    scope: null
+  commandName: Shell Script
+  customProperties: null
+  displayName: Shell Script
+  path: bundle.rb
+  scope: null
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-11295c32-e1b1-4eaa-ad9e-8e9172f7dda7,
+  path: bundle.rb, scope: source.shell}
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Run Script
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [M1+R]
+  outputPath: null
+  outputType: discard
+  path: commands/execute_current_file_in_window.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Make Script Executable
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M4+X]
+  outputPath: null
+  outputType: show_as_tooltip
+  path: commands/make_current_file_executable.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Documentation for Word / Selection
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [M4+H]
+  outputPath: null
+  outputType: show_as_tooltip
+  path: commands/man.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties:
+    prefix_values: [fun]
+  displayName: New Function
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [M2+ENTER]
+  outputPath: null
+  outputType: insert_as_snippet
+  path: commands/new_function.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Open Terminal
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [M2+M4+O]
+  outputPath: null
+  outputType: discard
+  path: commands/open_directory_in_terminal.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Toggle Backticks
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [M2+M4+']
+  outputPath: null
+  outputType: replace_selection
+  path: commands/toggle_backticks.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties:
+    prefix_values: ['!env']
+  displayName: '#!/usr/bin/env'
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [case]
+  displayName: case ... esac
+  expansion: "case ${1:word} in\n\t${2:pattern} )\n\t\t$0;;\nesac"
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [elif]
+  displayName: elif ...
+  expansion: "elif [[ ${1:condition} ]]; then\n\t${0:#statements}"
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [for]
+  displayName: for ... done
+  expansion: "for (( i = 0; i < ${1:10}; i++ )); do\n\t${0:#statements}\ndone"
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [forin]
+  displayName: for ... in ... done
+  expansion: "for ${1:i} in ${2:words}; do\n\t${0:#statements}\ndone"
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [here]
+  displayName: Here Document
+  expansion: "<<-'${1:TOKEN}'\n\t$0\n${1}"
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [if]
+  displayName: if ... fi
+  expansion: "if [[ ${1:condition} ]]; then\n\t${0:#statements}\nfi"
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [temp]
+  displayName: Tempfile
+  expansion: '${1:TMPFILE}="$(mktemp -t ${2:`echo "${TM_FILENAME%.*}" | sed -e ''s/[^a-zA-Z]/_/g''
+    -e ''s/^$/untitled/''`})"
+
+    ${3:${4/(.+)/trap "/}${4:rm -f ''\$${1/.*\s//}''}${4/(.+)/" 0               #
+    EXIT
+
+    /}${5/(.+)/trap "/}${5:rm -f ''\$${1/.*\s//}''; exit 1}${5/(.+)/" 2       # INT
+
+    /}${6/(.+)/trap "/}${6:rm -f ''\$${1/.*\s//}''; exit 1}${6/(.+)/" 1 15    # HUP
+    TERM
+
+    /}}
+
+    '
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [until]
+  displayName: until ... done
+  expansion: "until [[ ${1:condition} ]]; do\n\t${0:#statements}\ndone"
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [while]
+  displayName: while ... done
+  expansion: "while [[ ${1:condition} ]]; do\n\t${0:#statements}\ndone"
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+copyright: null
+customProperties: {contact_email_rot_13: znegva.xhruy@tznvy.pbz}
+decreaseIndentMarkers: {!scope 'source.shell': !regexp '(?-mix:^\s*(\}|(elif|else|fi|esac|done)\b))'}
+description: 'Support for running and editing shell scripts (using the bash dialect).
+
+  '
+displayName: Shell Script
+fileTypeRegistry: {'*.bash_logout': source.shell, .textmate_init: source.shell, '*.profile': source.shell,
+  '*.bash_login': source.shell, '*.ss': source.shell, '*.sh': source.shell, '*.bashrc': source.shell,
+  '*.bash_profile': source.shell}
+fileTypes: ['*.sh', '*.ss', '*.bashrc', '*.bash_profile', '*.bash_login', '*.profile',
+  '*.bash_logout', .textmate_init]
+foldingStartMarkers: {!scope 'source.shell': !regexp '(?-mix:\b(if|case)\b|(\{|\b(do)\b)$)'}
+foldingStopMarkers: {!scope 'source.shell': !regexp '(?-mix:^\s*(\}|(done|fi|esac)\b))'}
+increaseIndentMarkers: {!scope 'source.shell': !regexp '(?-mix:^\s*(if|elif|else|case)\b|^.*(\{|\b(do)\b)$)'}
+license: null
+licenseUrl: null
+path: bundle.rb
+repository: null
+visible: true
