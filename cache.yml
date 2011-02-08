@@ -122,12 +122,13 @@ children:
   displayName: Shell Script
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-9dfa9e1d-7e8f-4d40-9b9b-e12c2092330f,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-022738a8-86ad-4bbc-a0b5-3d0f14a53663,
   path: bundle.rb, scope: source.shell}
 - !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Run Script
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+R]
@@ -141,6 +142,7 @@ children:
   async: false
   customProperties: null
   displayName: Make Script Executable
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M1+M2+M4+X]
@@ -154,6 +156,7 @@ children:
   async: false
   customProperties: null
   displayName: Documentation for Word / Selection
+  input: [selection, word]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M4+H]
@@ -168,6 +171,7 @@ children:
   customProperties:
     prefix_values: [fun]
   displayName: New Function
+  input: [selection, word]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M2+ENTER]
@@ -181,6 +185,7 @@ children:
   async: false
   customProperties: null
   displayName: Open Terminal
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M2+M4+O]
@@ -194,6 +199,7 @@ children:
   async: false
   customProperties: null
   displayName: Toggle Backticks
+  input: [selection, undefined]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [M2+M4+']
@@ -208,6 +214,7 @@ children:
   customProperties:
     prefix_values: ['!env']
   displayName: '#!/usr/bin/env'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -222,6 +229,7 @@ children:
     prefix_values: [case]
   displayName: case ... esac
   expansion: "case ${1:word} in\n\t${2:pattern} )\n\t\t$0;;\nesac"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -236,6 +244,7 @@ children:
     prefix_values: [elif]
   displayName: elif ...
   expansion: "elif [[ ${1:condition} ]]; then\n\t${0:#statements}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -250,6 +259,7 @@ children:
     prefix_values: [for]
   displayName: for ... done
   expansion: "for (( i = 0; i < ${1:10}; i++ )); do\n\t${0:#statements}\ndone"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -264,6 +274,7 @@ children:
     prefix_values: [forin]
   displayName: for ... in ... done
   expansion: "for ${1:i} in ${2:words}; do\n\t${0:#statements}\ndone"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -278,6 +289,7 @@ children:
     prefix_values: [here]
   displayName: Here Document
   expansion: "<<-'${1:TOKEN}'\n\t$0\n${1}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -292,6 +304,7 @@ children:
     prefix_values: [if]
   displayName: if ... fi
   expansion: "if [[ ${1:condition} ]]; then\n\t${0:#statements}\nfi"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -319,6 +332,7 @@ children:
     /}}
 
     '
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -333,6 +347,7 @@ children:
     prefix_values: [until]
   displayName: until ... done
   expansion: "until [[ ${1:condition} ]]; do\n\t${0:#statements}\ndone"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -347,6 +362,7 @@ children:
     prefix_values: [while]
   displayName: while ... done
   expansion: "while [[ ${1:condition} ]]; do\n\t${0:#statements}\ndone"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
