@@ -25,7 +25,7 @@ try_help () {
 MANSECT=${MANSECT:-2:3:4:5:6:7:8:9} try_help
 try_help
 
-echo "Couldn’t find documentation for '${word}'"
+echo "Couldn't find documentation for '${word}'"
 
 EOF
 end
