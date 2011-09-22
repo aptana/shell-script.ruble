@@ -74,165 +74,16 @@ children:
   workingDirectoryType: UNDEFINED
 - !command
   async: false
-  customProperties:
-    prefix_values: ['!env']
-  displayName: '#!/usr/bin/env'
-  input: [none]
+  customProperties: null
+  displayName: Documentation for Word / Selection
+  input: [selection, word]
   inputPath: null
   keyBindingMap: null
   outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
+  outputType: show_as_tooltip
+  path: commands/man.rb
   runType: current_thread
   scope: null
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [case]
-  displayName: case ... esac
-  expansion: "case ${1:word} in\n\t${2:pattern} )\n\t\t$0;;\nesac"
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: source.shell
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [elif]
-  displayName: elif ...
-  expansion: "elif [[ ${1:condition} ]]; then\n\t${0:#statements}"
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: source.shell
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [for]
-  displayName: for ... done
-  expansion: "for (( i = 0; i < ${1:10}; i++ )); do\n\t${0:#statements}\ndone"
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: source.shell
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [forin]
-  displayName: for ... in ... done
-  expansion: "for ${1:i} in ${2:words}; do\n\t${0:#statements}\ndone"
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: source.shell
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [here]
-  displayName: Here Document
-  expansion: "<<-'${1:TOKEN}'\n\t$0\n${1}"
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: source.shell
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [if]
-  displayName: if ... fi
-  expansion: "if [[ ${1:condition} ]]; then\n\t${0:#statements}\nfi"
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: source.shell
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [temp]
-  displayName: Tempfile
-  expansion: '${1:TMPFILE}="$(mktemp -t ${2:`echo "${TM_FILENAME%.*}" | sed -e ''s/[^a-zA-Z]/_/g''
-    -e ''s/^$/untitled/''`})"
-
-    ${3:${4/(.+)/trap "/}${4:rm -f ''\$${1/.*\s//}''}${4/(.+)/" 0               #
-    EXIT
-
-    /}${5/(.+)/trap "/}${5:rm -f ''\$${1/.*\s//}''; exit 1}${5/(.+)/" 2       # INT
-
-    /}${6/(.+)/trap "/}${6:rm -f ''\$${1/.*\s//}''; exit 1}${6/(.+)/" 1 15    # HUP
-    TERM
-
-    /}}
-
-    '
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: source.shell
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [until]
-  displayName: until ... done
-  expansion: "until [[ ${1:condition} ]]; do\n\t${0:#statements}\ndone"
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: source.shell
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [while]
-  displayName: while ... done
-  expansion: "while [[ ${1:condition} ]]; do\n\t${0:#statements}\ndone"
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: source.shell
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.MenuElement
   children:
@@ -355,20 +206,141 @@ children:
   displayName: Shell Script
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-6dedbede-0b52-4ba1-a21c-333506923713,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-84b1a281-431d-451c-b43c-875faef8f5f8,
   path: bundle.rb, scope: source.shell}
 - !!com.aptana.scripting.model.CommandElement
   async: false
-  customProperties: null
-  displayName: Documentation for Word / Selection
-  input: [selection, word]
+  customProperties:
+    prefix_values: ['!env']
+  displayName: '#!/usr/bin/env'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
-  outputType: show_as_tooltip
-  path: commands/man.rb
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
   runType: current_thread
   scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [case]
+  displayName: case ... esac
+  expansion: "case ${1:word} in\n\t${2:pattern} )\n\t\t$0;;\nesac"
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [elif]
+  displayName: elif ...
+  expansion: "elif [[ ${1:condition} ]]; then\n\t${0:#statements}"
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [for]
+  displayName: for ... done
+  expansion: "for (( i = 0; i < ${1:10}; i++ )); do\n\t${0:#statements}\ndone"
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [forin]
+  displayName: for ... in ... done
+  expansion: "for ${1:i} in ${2:words}; do\n\t${0:#statements}\ndone"
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [here]
+  displayName: Here Document
+  expansion: "<<-'${1:TOKEN}'\n\t$0\n${1}"
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [if]
+  displayName: if ... fi
+  expansion: "if [[ ${1:condition} ]]; then\n\t${0:#statements}\nfi"
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [until]
+  displayName: until ... done
+  expansion: "until [[ ${1:condition} ]]; do\n\t${0:#statements}\ndone"
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [while]
+  displayName: while ... done
+  expansion: "while [[ ${1:condition} ]]; do\n\t${0:#statements}\ndone"
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.shell
   workingDirectoryType: UNDEFINED
 copyright: null
 customProperties: {contact_email_rot_13: znegva.xhruy@tznvy.pbz}
@@ -377,12 +349,13 @@ description: 'Support for running and editing shell scripts (using the bash dial
 
   '
 displayName: Shell Script
-fileTypeRegistry: {.textmate_init: source.shell, '*.bash_logout': source.shell, '*.profile': source.shell,
-  '*.bash_login': source.shell, '*.ss': source.shell, '*.bashrc': source.shell, '*.sh': source.shell,
+fileTypeRegistry: {'*.bash_logout': source.shell, .textmate_init: source.shell, '*.profile': source.shell,
+  '*.bash_login': source.shell, '*.ss': source.shell, '*.sh': source.shell, '*.bashrc': source.shell,
   '*.bash_profile': source.shell}
 fileTypes: ['*.sh', '*.ss', '*.bashrc', '*.bash_profile', '*.bash_login', '*.profile',
   '*.bash_logout', .textmate_init, '*.sh', '*.ss', '*.bashrc', '*.bash_profile', '*.bash_login',
-  '*.profile', '*.bash_logout', .textmate_init]
+  '*.profile', '*.bash_logout', .textmate_init, '*.sh', '*.ss', '*.bashrc', '*.bash_profile',
+  '*.bash_login', '*.profile', '*.bash_logout', .textmate_init]
 foldingStartMarkers: {!scope 'source.shell': !regexp '(?-mix:\b(if|case)\b|(\{|\b(do)\b)$)'}
 foldingStopMarkers: {!scope 'source.shell': !regexp '(?-mix:^\s*(\}|(done|fi|esac)\b))'}
 increaseIndentMarkers: {!scope 'source.shell': !regexp '(?-mix:^\s*(if|elif|else|case)\b|^.*(\{|\b(do)\b)$)'}
