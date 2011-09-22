@@ -61,16 +61,16 @@ snippet 'if ... fi' do |s|
 fi'
 end
 
-snippet 'Tempfile' do |s|
-  s.trigger = 'temp'
-  # FIXME Fix this snippet!
-  s.expansion = '${1:TMPFILE}="$(mktemp -t ${2:`echo "${TM_FILENAME%.*}" | sed -e \'s/[^a-zA-Z]/_/g\' -e \'s/^$/untitled/\'`})"
-${3:${4/(.+)/trap "/}${4:rm -f \'\$${1/.*\s//}\'}${4/(.+)/" 0               # EXIT
-/}${5/(.+)/trap "/}${5:rm -f \'\$${1/.*\s//}\'; exit 1}${5/(.+)/" 2       # INT
-/}${6/(.+)/trap "/}${6:rm -f \'\$${1/.*\s//}\'; exit 1}${6/(.+)/" 1 15    # HUP TERM
-/}}
-'
-end
+# FIXME Not currently working due to unsupported TextMate functionality
+# snippet 'Tempfile' do |s|
+  # s.trigger = 'temp'
+  # s.expansion = '${1:TMPFILE}="$(mktemp -t ${2:`echo "${TM_FILENAME%.*}" | sed -e \'s/[^a-zA-Z]/_/g\' -e \'s/^$/untitled/\'`})"
+# ${3:${4/(.+)/trap "/}${4:rm -f \'\$${1/.*\s//}\'}${4/(.+)/" 0               # EXIT
+# /}${5/(.+)/trap "/}${5:rm -f \'\$${1/.*\s//}\'; exit 1}${5/(.+)/" 2       # INT
+# /}${6/(.+)/trap "/}${6:rm -f \'\$${1/.*\s//}\'; exit 1}${6/(.+)/" 1 15    # HUP TERM
+# /}}
+# '
+# end
 
 snippet 'until ... done' do |s|
   s.trigger = 'until'
