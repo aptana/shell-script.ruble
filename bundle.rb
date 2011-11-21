@@ -3,6 +3,7 @@ require 'ruble'
 bundle 'Shell Script' do |bundle|
   bundle.author = 'Martin Kuehl'
   bundle.contact_email_rot_13 = 'znegva.xhruy@tznvy.pbz'
+  bundle.repository = 'git://github.com/aptana/shell-script.ruble.git'
   bundle.description =  <<END
 Support for running and editing shell scripts (using the bash dialect).
 END
