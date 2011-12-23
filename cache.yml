@@ -122,7 +122,7 @@ children:
   displayName: Shell Script
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-67d740ed-8f1f-407d-b2a1-0adee57bfde7,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-c31968c1-4ceb-4f2e-a3c6-be00c30fe8af,
   path: bundle.rb, scope: source.shell}
 - !!com.aptana.scripting.model.CommandElement
   async: false
@@ -360,5 +360,5 @@ increaseIndentMarkers: {!scope 'source.shell': !regexp '(?-mix:^\s*(if|elif|else
 license: null
 licenseUrl: null
 path: bundle.rb
-repository: null
+repository: git://github.com/aptana/shell-script.ruble.git
 visible: true
