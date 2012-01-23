@@ -1,7 +1,7 @@
 require 'ruble'
 
 # TODO Don't show/define on windows?
-command 'Make Script Executable' do |cmd|
+command t(:make_script_executable) do |cmd|
   cmd.key_binding = 'M1+M2+M4+X'
   cmd.output = :show_as_tooltip
   cmd.input = :none

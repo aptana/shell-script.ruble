@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Documentation for Word / Selection' do |cmd|
+command t(:docs_for_word) do |cmd|
   #cmd.key_binding = 'M4+H'
   cmd.output = :show_as_tooltip
   cmd.input = :selection, :word

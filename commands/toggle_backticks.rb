@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Toggle Backticks' do |cmd|
+command t(:toggle_backticks) do |cmd|
   cmd.key_binding = 'M2+M4+\''
   # cmd.scope = 'source.shell string.interpolated'
   cmd.scope = 'source.shell'

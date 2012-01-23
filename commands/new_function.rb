@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'New Function' do |cmd|
+command t(:new_function) do |cmd|
   cmd.key_binding = 'M2+ENTER'
   cmd.scope = 'source.shell'
   cmd.trigger = 'fun'
