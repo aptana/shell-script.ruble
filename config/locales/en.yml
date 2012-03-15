@@ -1,0 +1,12 @@
+en:
+  bundle_name: 'Shell Script'
+  run_script: 'Run Script'
+  make_script_executable: 'Make Script Executable'
+  open_terminal: 'Open Terminal'
+  docs_for_word: 'Documentation for Word / Selection'
+  new_function: 'New Function'
+  here_doc: 'Here Document'
+  tests: 'Tests'
+  loops: 'Loops'
+  toggle_backticks: 'Toggle Backticks'
+  

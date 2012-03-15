@@ -1,12 +1,11 @@
 require 'ruble'
 
-bundle 'Shell Script' do |bundle|
+bundle t(:bundle_name) do |bundle|
   bundle.author = 'Martin Kuehl'
   bundle.contact_email_rot_13 = 'znegva.xhruy@tznvy.pbz'
   bundle.repository = 'git://github.com/aptana/shell-script.ruble.git'
-  bundle.description =  <<END
-Support for running and editing shell scripts (using the bash dialect).
-END
+  bundle.description = 'Support for running and editing shell scripts (using the bash dialect).'
+  
   # Indentation
   increase_indent = /^\s*(if|elif|else|case)\b|^.*(\{|\b(do)\b)$/
   decrease_indent = /^\s*(\}|(elif|else|fi|esac|done)\b)/
@@ -20,23 +19,23 @@ END
   # Filetypes
   bundle.file_types['source.shell'] = '*.sh', '*.ss', '*.bashrc', '*.bash_profile', '*.bash_login', '*.profile', '*.bash_logout', '.textmate_init'
 
-  bundle.menu 'Shell Script' do |main_menu|
-    main_menu.command 'Run Script'
-    main_menu.command 'Make Script Executable'
-    main_menu.command 'Open Terminal'
+  bundle.menu t(:bundle_name) do |main_menu|
+    main_menu.command t(:run_script)
+    main_menu.command t(:make_script_executable)
+    main_menu.command t(:open_terminal)
     main_menu.separator
-    main_menu.command 'Documentation for Word / Selection'
+    main_menu.command t(:docs_for_word)
     main_menu.separator
-    main_menu.command 'New Function'
-    main_menu.command 'Here Document'
+    main_menu.command t(:new_function)
+    main_menu.command t(:here_doc)
     main_menu.command '#!/usr/bin/env'
     main_menu.separator
-    main_menu.menu 'Tests' do |submenu|
+    main_menu.menu t(:tests) do |submenu|
       submenu.command 'if ... fi'
       submenu.command 'elif ...'
       submenu.command 'case ... esac'
     end
-    main_menu.menu 'Loops' do |submenu|
+    main_menu.menu t(:loops) do |submenu|
       submenu.command 'for ... done'
       submenu.command 'for ... in ... done'
       submenu.command 'while ... done'
