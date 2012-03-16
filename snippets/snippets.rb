@@ -47,7 +47,7 @@ snippet 'for ... in ... done' do |s|
 done'
 end
 
-snippet 'Here Document' do |s|
+snippet t(:here_doc) do |s|
   s.trigger = 'here'
   s.expansion = '<<-\'${1:TOKEN}\'
 	$0
